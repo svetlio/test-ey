@@ -8,7 +8,7 @@ default['php']['version'] = case attribute['dna']['engineyard']['environment']['
   when 'php_71'
       '7.1.0'
   else
-   '5.6.25'	
+   '7.1.0'	
 end
  
-default['php']['minor_version'] =  '7.1'#default['php']['version'].split(".").first(2).join(".")
+default['php']['minor_version'] =  default['php']['version'].split(".").first(2).join(".")
